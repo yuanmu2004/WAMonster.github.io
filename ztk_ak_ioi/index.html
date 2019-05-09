@@ -17,28 +17,37 @@
 					nowTime = Math.ceil(Math.random() * 200);
 				}
 				count += nowTime;
+				if (count == 1) {
+					alert("你成功地膜了ztk一次！再接再厉！");
+					document.body.style.background = "url(https://s1.ax1x.com/2018/10/30/i2gOWn.jpg) fixed";
+					document.body.style.backgroundSize = "cover";
+				}
 				if (nowTime > 10) alert("ztk被你膜了 " + nowTime + " 次" + (nowTime >= 100 ? "!" : ""));
 				flushText();
 				if (count >= 100 && count - nowTime < 100) alert("滴水穿石，你已经膜了ztk一百余次啦！加油！争取膜到10000次！");
 				if (count >= 10000 && count - nowTime < 10000) {
 					alert("ztk被你膜死了");
 					alert("你的毅力值得称赞！");
+					document.getElementById("outlink1").style.visibility = "visible";
 				}
 			}
 		</script>
 		
 		<style type = "text/css">
 			body {
-				background : url(https://s1.ax1x.com/2018/10/30/i2gOWn.jpg) fixed;
-				background-size: cover;
 				font-family: "黑体";
 			}
 			#head1 {
 				font-weight: bolder;
-				font-size: 50px;
+				font-size: 80px;
 			}
 			#board {
 				font-size: 20px;
+			}
+			#outlink1 {
+				font-size: 20px;
+				color: gray; 
+				visibility: hidden;
 			}
 		</style>
 	</head>
@@ -52,21 +61,13 @@
 			<br />
 			<br />
 			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<button type="button" onclick="orz()">点击膜ztk</button>
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
+			<button type="button" onclick='orz()' style="font-size: 30px; color: red;">点击膜ztk</button>
 			<br />
 			<br />
 			<br />
 			<p id = "board">你已经膜了ztk 0  次</p>
+			<br />
+			<a href="https://www.luogu.org/space/show?uid=73573" id="outlink1">点击前往ztk个人主页</a>
 		</div>
 	</body>
 </html>
